@@ -21,9 +21,6 @@ S   |     32
        Computes  A  +  B,  where  A and B are 32-bit values.  Stores result in
        32-bit value S.
 
-#### BUGS
-       Working on recursive dependency download for hardware.
-
 #### AUTHOR
        Alexander T Pastoriza
 
