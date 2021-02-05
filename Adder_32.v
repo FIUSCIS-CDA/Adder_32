@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus II 64-Bit"
 // VERSION		"Version 15.0.0 Build 145 04/22/2015 SJ Web Edition"
-// CREATED		"Mon Feb  1 19:50:37 2021"
+// CREATED		"Thu Feb  4 15:07:45 2021"
 
 module Adder_32(
 	A,
@@ -61,6 +61,7 @@ wire	Carry8To9;
 wire	Carry9To10;
 wire	Ground;
 wire	[31:0] S_ALTERA_SYNTHESIZED;
+wire	Unused;
 
 
 
@@ -318,9 +319,12 @@ OneBitAdder	b2v_bit31(
 	.ci(Carry30To31),
 	.a(A[31]),
 	.b(B[31]),
-	
+	.co(Unused),
 	.s(S_ALTERA_SYNTHESIZED[31]));
 
+
+Grounder	b2v_inst(
+	.Input_To_Ground(Unused));
 
 
 assign	S = S_ALTERA_SYNTHESIZED;
